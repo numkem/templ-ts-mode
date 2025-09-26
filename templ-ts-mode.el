@@ -207,9 +207,9 @@
 (defvar templ-ts--indent-rules
   `(;; Javascript used for script blocks that use the javascript
     ;; sub-parser.
-    ,(if (functionp 'js--treesit-indent-rules-cached)
-         (js--treesit-indent-rules-cached)
-       (js--treesit-indent-rules))
+    ,(if (functionp 'js--treesit-indent-rules)
+         (js--treesit-indent-rules)
+       (car js--treesit-indent-rules))
     ;; Templ rules, for the rest of the file.
     (templ
 
@@ -331,9 +331,9 @@
                                          templ-ts--go-font-lock-rules))
                      (root-compiled (apply #'treesit-font-lock-rules
                                            root-rules))
-                     (js-compiled (if (functionp 'js--treesit-font-lock-settings-cached)
-                                      (js--treesit-font-lock-settings-cached)
-                                    (js--treesit-font-lock-settings)))
+                     (js-compiled (if (functionp 'js--treesit-font-lock-settings)
+                                      (js--treesit-font-lock-settings)
+                                    js--treesit-font-lock-settings))
                 (append js-compiled root-compiled)))
 
   (treesit-major-mode-setup))
