@@ -333,7 +333,7 @@
                                            root-rules))
                      (js-compiled (if (functionp 'js--treesit-font-lock-settings)
                                       (js--treesit-font-lock-settings)
-                                    js--treesit-font-lock-settings))
+                                    js--treesit-font-lock-settings)))
                 (append js-compiled root-compiled)))
 
   (treesit-major-mode-setup))
