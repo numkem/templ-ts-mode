@@ -82,6 +82,7 @@
    :language 'templ
    :feature 'constant
    `([(false) (nil) (true)] @font-lock-constant-face
+     (iota) @font-lock-constant-face
      (const_declaration
       (const_spec name: (identifier) @font-lock-constant-face)))
 
