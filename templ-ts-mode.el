@@ -97,6 +97,10 @@
       name: (field_identifier) @font-lock-function-name-face)
      (field_declaration
       name: (field_identifier) @font-lock-property-name-face)
+     (method_elem
+      name: (field_identifier) @font-lock-function-name-face)
+     (method_spec
+      name: (field_identifier) @font-lock-function-name-face)
      (parameter_declaration
       name: (identifier) @font-lock-variable-name-face)
      (short_var_declaration
